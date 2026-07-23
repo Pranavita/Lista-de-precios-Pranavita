@@ -359,6 +359,14 @@
     .add-btn, .rem-btn { width: 26px; height: 26px; font-size: 1rem; }
     .qty-badge { font-size: 0.68rem; min-width: 18px; height: 18px; }
 
+    /* Cart drawer full width */
+    #cart-drawer { width: 100vw; }
+    #cart-fab { bottom: 16px; right: 16px; font-size: 0.85rem; padding: 12px 16px; }
+
+    /* Checkout modal */
+    #checkout-modal { padding: 20px 16px; }
+  }
+
   /* MIX INGREDIENTS */
   .mix-ingredients {
     display: block;
@@ -372,6 +380,8 @@
     color: var(--brand-dark);
     font-style: italic;
   }
+
+  /* PESABLE INPUT */
   .pesable-wrap {
     display: inline-flex; align-items: center; gap: 4px;
     background: var(--brand-ultra);
@@ -398,14 +408,6 @@
     letter-spacing: 0.02em;
   }
   .pesable-btn:hover { background: var(--brand-dark); transform: scale(1.04); }
-
-    /* Cart drawer full width */
-    #cart-drawer { width: 100vw; }
-    #cart-fab { bottom: 16px; right: 16px; font-size: 0.85rem; padding: 12px 16px; }
-
-    /* Checkout modal */
-    #checkout-modal { padding: 20px 16px; }
-  }
   @media print {
     .search-bar, .header { position: static; }
     .ver-btn, .add-btn, #cart-fab { display: none; }
@@ -460,7 +462,7 @@
         <th>Atributos</th>
         <th class="right">Precio</th>
         <th class="center">Ver</th>
-        <th class="cart-th">+</th>
+        <th class="cart-th">Carrito</th>
       </tr>
     </thead>
     <tbody id="table-body">
@@ -8934,8 +8936,13 @@ function filterTable() {
     scored.push({ row, score });
   });
 
-  // Sort by score and re-append to tbody
-  scored.sort((a, b) => a.score - b.score);
+  // Sort by score and re-append to tbody; alphabetical tiebreaker
+  scored.sort((a, b) => {
+    if (a.score !== b.score) return a.score - b.score;
+    const ta = normalize(a.row.querySelector('td.desc')?.textContent || '');
+    const tb = normalize(b.row.querySelector('td.desc')?.textContent || '');
+    return ta.localeCompare(tb);
+  });
   scored.forEach(({ row }) => tbody.appendChild(row));
 
   const visible = scored.filter(s => !s.row.classList.contains('hidden')).length;
