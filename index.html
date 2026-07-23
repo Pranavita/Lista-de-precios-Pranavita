@@ -372,24 +372,32 @@
     color: var(--brand-dark);
     font-style: italic;
   }
-  .pesable-wrap { display: inline-flex; align-items: center; gap: 4px; }
-  .pesable-input {
-    width: 58px; height: 28px;
-    border: 1.5px solid var(--border); border-radius: 6px;
-    padding: 0 6px; font-family: inherit; font-size: 0.75rem;
-    outline: none; text-align: center;
-    transition: border-color 0.2s;
+  .pesable-wrap {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: var(--brand-ultra);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 3px 4px 3px 6px;
   }
-  .pesable-input:focus { border-color: var(--brand); }
+  .pesable-input {
+    width: 54px; height: 24px;
+    border: none; background: transparent;
+    padding: 0 4px; font-family: inherit; font-size: 0.75rem;
+    outline: none; text-align: center;
+    color: var(--brand-deeper); font-weight: 600;
+  }
+  .pesable-input::placeholder { color: var(--muted); font-weight: 400; }
+  .pesable-input:focus { color: var(--brand); }
   .pesable-unit { font-size: 0.7rem; color: var(--muted); }
   .pesable-btn {
-    height: 28px; padding: 0 8px;
+    height: 28px; padding: 0 10px;
     background: var(--brand); color: white;
     border: none; border-radius: 6px;
     font-family: inherit; font-size: 0.72rem; font-weight: 700;
-    cursor: pointer; transition: background 0.15s; white-space: nowrap;
+    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+    letter-spacing: 0.02em;
   }
-  .pesable-btn:hover { background: var(--brand-dark); }
+  .pesable-btn:hover { background: var(--brand-dark); transform: scale(1.04); }
 
     /* Cart drawer full width */
     #cart-drawer { width: 100vw; }
