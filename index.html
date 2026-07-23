@@ -8868,29 +8868,69 @@ function toggleFilter(btn) {
 function filterTable() {
   const raw = document.getElementById('search').value.trim();
   const q = normalize(raw);
-  const rows = document.querySelectorAll('#table-body tr');
-  let visible = 1016;
-  let lastGroupRow = null;
-  let groupHasVisible = false;
-  rows.forEach(row => {
-    if (row.classList.contains('group-header')) {
-      if (lastGroupRow && !groupHasVisible) lastGroupRow.classList.add('hidden');
-      lastGroupRow = row;
-      groupHasVisible = false;
-    } else {
-      const textOk = !q || normalize(row.textContent).includes(q);
-      let filtersOk = true;
-      activeFilters.forEach(f => { if (!row.hasAttribute('data-' + f)) filtersOk = false; });
-      const show = textOk && filtersOk;
-      row.classList.toggle('hidden', !show);
-      if (show) { visible++; groupHasVisible = true; }
-    }
-  });
-  if (lastGroupRow && !groupHasVisible) lastGroupRow.classList.add('hidden');
+  const tbody = document.getElementById('table-body');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+
+  // Hide all group headers first
+  rows.forEach(r => { if (r.classList.contains('group-header')) r.classList.add('hidden'); });
+
   if (!q && activeFilters.size === 0) {
-    document.querySelectorAll('.group-header').forEach(r => r.classList.remove('hidden'));
-    visible = 1016;
+    // No search, no filters: restore original order and show all
+    rows.forEach(r => r.classList.remove('hidden'));
+    document.getElementById('result-count').textContent = '1016 resultados';
+    return;
   }
+
+  // Score each product row
+  const scored = [];
+  rows.forEach(row => {
+    if (row.classList.contains('group-header')) return;
+
+    // Filter check
+    let filtersOk = true;
+    activeFilters.forEach(f => { if (!row.hasAttribute('data-' + f)) filtersOk = false; });
+
+    if (!filtersOk) { row.classList.add('hidden'); return; }
+
+    if (!q) {
+      row.classList.remove('hidden');
+      scored.push({ row, score: 0 });
+      return;
+    }
+
+    // Get description text (first td.desc text, normalized)
+    const descEl = row.querySelector('td.desc');
+    const descText = descEl ? normalize(descEl.textContent) : '';
+    const fullText = normalize(row.textContent);
+
+    if (!fullText.includes(q)) {
+      row.classList.add('hidden');
+      return;
+    }
+
+    row.classList.remove('hidden');
+
+    // Score: position of query in description (lower = better)
+    // Split desc into words and find which word index the query starts at
+    const words = descText.split(/\s+/);
+    let wordPos = 999;
+    for (let i = 0; i < words.length; i++) {
+      if (words[i].includes(q) || words.slice(i).join(' ').startsWith(q)) {
+        wordPos = i;
+        break;
+      }
+    }
+    // Exact word match at position gets bonus
+    const exactWord = words.some(w => w === q);
+    const score = wordPos * 10 - (exactWord ? 5 : 0);
+    scored.push({ row, score });
+  });
+
+  // Sort by score and re-append to tbody
+  scored.sort((a, b) => a.score - b.score);
+  scored.forEach(({ row }) => tbody.appendChild(row));
+
+  const visible = scored.filter(s => !s.row.classList.contains('hidden')).length;
   document.getElementById('result-count').textContent = visible + ' resultado' + (visible === 1 ? '' : 's');
 }
 
