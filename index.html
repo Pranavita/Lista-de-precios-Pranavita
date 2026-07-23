@@ -381,7 +381,6 @@
     font-style: italic;
   }
 
-  /* PESABLE INPUT */
   .pesable-wrap {
     display: inline-flex; align-items: center; gap: 4px;
     background: var(--brand-ultra);
@@ -390,15 +389,15 @@
     padding: 3px 4px 3px 6px;
   }
   .pesable-input {
-    width: 54px; height: 24px;
+    width: 48px; height: 24px;
     border: none; background: transparent;
-    padding: 0 4px; font-family: inherit; font-size: 0.75rem;
+    padding: 0 2px; font-family: inherit; font-size: 0.75rem;
     outline: none; text-align: center;
     color: var(--brand-deeper); font-weight: 600;
   }
-  .pesable-input::placeholder { color: var(--muted); font-weight: 400; }
+  .pesable-input::placeholder { color: var(--muted); font-weight: 400; font-size: 0.7rem; }
   .pesable-input:focus { color: var(--brand); }
-  .pesable-unit { font-size: 0.7rem; color: var(--muted); }
+  .pesable-unit { font-size: 0.68rem; color: var(--muted); margin-right: 2px; }
   .pesable-btn {
     height: 28px; padding: 0 10px;
     background: var(--brand); color: white;
@@ -5465,7 +5464,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 32.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CASTA%C3%91A%20DE%20CAJU%20W4%20TOSTADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CASTAÑA DE CAJU W4 TOSTADA X KG.', 32000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CASTAÑA DE CAJU W4 TOSTADA X KG.', 32000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003835</td>
@@ -5473,7 +5472,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 17.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AJI%20MOLIDO%20AHUMADO%20%22MERKEN%22%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJI MOLIDO AHUMADO &quot;MERKEN&quot; X KG', 17500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJI MOLIDO AHUMADO &quot;MERKEN&quot; X KG', 17500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003827</td>
@@ -5481,7 +5480,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 24.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AJO%20AHUMADO%20GRANULADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJO AHUMADO GRANULADO X KG.', 24500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJO AHUMADO GRANULADO X KG.', 24500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000968</td>
@@ -5489,7 +5488,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AJO%20EN%20POLVO%20NAC.%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJO EN POLVO NAC. X KG.', 8500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJO EN POLVO NAC. X KG.', 8500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000148</td>
@@ -5497,7 +5496,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 12.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AJO%20EN%20POLVO%20S/%20TACC%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJO EN POLVO S/ TACC X KG.', 12500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJO EN POLVO S/ TACC X KG.', 12500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000149</td>
@@ -5505,7 +5504,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 13.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AJO%20GRANULADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJO GRANULADO X KG.', 13500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AJO GRANULADO X KG.', 13500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000355</td>
@@ -5513,7 +5512,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 26.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ALMENDRA%20CARMEL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ALMENDRA CARMEL X KG.', 26000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ALMENDRA CARMEL X KG.', 26000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000442</td>
@@ -5521,7 +5520,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 30.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ALMENDRA%20NON%20PAREIL%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ALMENDRA NON PAREIL X KG', 30000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ALMENDRA NON PAREIL X KG', 30000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003820</td>
@@ -5529,7 +5528,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 6.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ALPISTE%20CONS.%20HUMANO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ALPISTE CONS. HUMANO X KG.', 6000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ALPISTE CONS. HUMANO X KG.', 6000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002328</td>
@@ -5537,7 +5536,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 21.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AMBAY%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AMBAY X KG.', 21500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AMBAY X KG.', 21500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002857</td>
@@ -5545,7 +5544,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 72.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ANIS%20ESTRELLADO%20ENTERO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ANIS ESTRELLADO ENTERO X KG.', 72000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ANIS ESTRELLADO ENTERO X KG.', 72000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000127</td>
@@ -5553,7 +5552,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 26.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ANIS%20GRANO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ANIS GRANO X KG.', 26500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ANIS GRANO X KG.', 26500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000370</td>
@@ -5561,7 +5560,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 17.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ARANDANOS%20DESHIDRATADOS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARANDANOS DESHIDRATADOS X KG.', 17500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARANDANOS DESHIDRATADOS X KG.', 17500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000269</td>
@@ -5569,7 +5568,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 10.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ARROZ%20BASMATI%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ BASMATI X KG.', 10000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ BASMATI X KG.', 10000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003839</td>
@@ -5577,7 +5576,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 4.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ARROZ%20FORTUNA%20DOBLE%20CARO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ FORTUNA DOBLE CARO X KG.', 4000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ FORTUNA DOBLE CARO X KG.', 4000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000270</td>
@@ -5585,7 +5584,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ARROZ%20KOSHIHIKARI%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ KOSHIHIKARI X KG.', 3500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ KOSHIHIKARI X KG.', 3500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000201</td>
@@ -5593,7 +5592,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.250</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ARROZ%20PARBOIL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ PARBOIL X KG.', 2250)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ PARBOIL X KG.', 2250)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003838</td>
@@ -5601,7 +5600,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.100</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ARROZ%20YAMANI%20INTEGRAL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ YAMANI INTEGRAL X KG.', 3100)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARROZ YAMANI INTEGRAL X KG.', 3100)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002224</td>
@@ -5609,7 +5608,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.300</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ARVEJA%20PARTIDA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARVEJA PARTIDA X KG.', 2300)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ARVEJA PARTIDA X KG.', 2300)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000356</td>
@@ -5617,7 +5616,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 37.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AVELLANAS%20PELADAS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AVELLANAS PELADAS X KG.', 37000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AVELLANAS PELADAS X KG.', 37000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000284</td>
@@ -5625,7 +5624,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AVENA%20GRUESA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AVENA GRUESA X KG.', 3000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AVENA GRUESA X KG.', 3000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000287</td>
@@ -5633,7 +5632,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AVENA%20INSTANTANEA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AVENA INSTANTANEA X KG.', 3000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AVENA INSTANTANEA X KG.', 3000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001124</td>
@@ -5641,7 +5640,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 4.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AZUCAR%20DE%20MASCABO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AZUCAR DE MASCABO X KG.', 4500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AZUCAR DE MASCABO X KG.', 4500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000728</td>
@@ -5649,7 +5648,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 38.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AZUCAR%20INTEGRAL%20DE%20COCO%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AZUCAR INTEGRAL DE COCO X KG', 38000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AZUCAR INTEGRAL DE COCO X KG', 38000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000439</td>
@@ -5657,7 +5656,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.100</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20AZUCAR%20RUBIA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AZUCAR RUBIA X KG', 3100)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE AZUCAR RUBIA X KG', 3100)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002246</td>
@@ -5665,7 +5664,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 35.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20BAHARAT%207%20ESPECIAS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BAHARAT 7 ESPECIAS X KG.', 35000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BAHARAT 7 ESPECIAS X KG.', 35000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000398</td>
@@ -5673,7 +5672,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 32.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20BAYAS%20DE%20GOJI%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BAYAS DE GOJI X KG.', 32000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BAYAS DE GOJI X KG.', 32000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000151</td>
@@ -5681,7 +5680,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 5.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20BICARBONATO%20DE%20SODIO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BICARBONATO DE SODIO X KG.', 5000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BICARBONATO DE SODIO X KG.', 5000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001065</td>
@@ -5689,7 +5688,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 27.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20BOLDO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BOLDO X KG.', 27500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BOLDO X KG.', 27500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001144</td>
@@ -5697,7 +5696,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 35.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20BURRITO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BURRITO X KG.', 35000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE BURRITO X KG.', 35000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002616</td>
@@ -5705,7 +5704,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 26.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CACAO%20AMARGO%20ALCALINO%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CACAO AMARGO ALCALINO X KG', 26000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CACAO AMARGO ALCALINO X KG', 26000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003009</td>
@@ -5713,7 +5712,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 15.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CACAO%20EN%20POLVO%20AMARGO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CACAO EN POLVO AMARGO X KG.', 15000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CACAO EN POLVO AMARGO X KG.', 15000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002360</td>
@@ -5721,7 +5720,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CANELA%20MOLIDA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CANELA MOLIDA X KG', 20500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CANELA MOLIDA X KG', 20500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002359</td>
@@ -5729,7 +5728,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 80.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CANELA%20RAMA%20PREMIUM%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CANELA RAMA PREMIUM X KG.', 80500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CANELA RAMA PREMIUM X KG.', 80500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000357</td>
@@ -5737,7 +5736,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 22.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CASTA%C3%91A%20DE%20CAJU%20W4%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CASTAÑA DE CAJU W4 X KG.', 22000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CASTAÑA DE CAJU W4 X KG.', 22000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002034</td>
@@ -5745,7 +5744,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 55.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CASTA%C3%91A%20DE%20PARA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CASTAÑA DE PARA X KG.', 55000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CASTAÑA DE PARA X KG.', 55000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002080</td>
@@ -5753,7 +5752,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CEBADA%20PERLADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CEBADA PERLADA X KG.', 2500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CEBADA PERLADA X KG.', 2500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000268</td>
@@ -5761,7 +5760,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 13.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CEBOLLA%20EN%20POLVO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CEBOLLA EN POLVO X KG.', 13000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CEBOLLA EN POLVO X KG.', 13000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003847</td>
@@ -5769,7 +5768,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 23.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CEBOLLA%20ESCAMAS%20AHUMADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CEBOLLA ESCAMAS AHUMADA X KG.', 23000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CEBOLLA ESCAMAS AHUMADA X KG.', 23000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003350</td>
@@ -5777,7 +5776,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 25.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CHICKEN%20MASALA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CHICKEN MASALA X KG.', 25000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CHICKEN MASALA X KG.', 25000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002862</td>
@@ -5785,7 +5784,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 19.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CHIPS%20DE%20BANANA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CHIPS DE BANANA X KG', 19000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CHIPS DE BANANA X KG', 19000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003791</td>
@@ -5793,7 +5792,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CIRUELA%20D%60AGEN%20C/%20CAROZO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CIRUELA D`AGEN C/ CAROZO X KG.', 8500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CIRUELA D`AGEN C/ CAROZO X KG.', 8500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000368</td>
@@ -5801,7 +5800,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 11.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CIRUELA%20D%60AGEN%20S/%20CAROZO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CIRUELA D`AGEN S/ CAROZO X KG.', 11000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CIRUELA D`AGEN S/ CAROZO X KG.', 11000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000369</td>
@@ -5809,7 +5808,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 15.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CIRUELA%20PRESIDENTE%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CIRUELA PRESIDENTE X KG.', 15000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CIRUELA PRESIDENTE X KG.', 15000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000129</td>
@@ -5817,7 +5816,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 61.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CLAVO%20DE%20OLOR%20ENTERO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CLAVO DE OLOR ENTERO X KG.', 61000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CLAVO DE OLOR ENTERO X KG.', 61000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000365</td>
@@ -5825,7 +5824,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 24.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20COCO%20EN%20ESCAMAS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COCO EN ESCAMAS X KG.', 24000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COCO EN ESCAMAS X KG.', 24000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000364</td>
@@ -5833,7 +5832,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 11.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20COCO%20RALLADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COCO RALLADO X KG.', 11000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COCO RALLADO X KG.', 11000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001094</td>
@@ -5841,7 +5840,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20COLA%20DE%20CABALLO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COLA DE CABALLO X KG.', 20000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COLA DE CABALLO X KG.', 20000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002357</td>
@@ -5849,7 +5848,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20COMINO%20EN%20GRANO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COMINO EN GRANO X KG.', 20500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COMINO EN GRANO X KG.', 20500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000126</td>
@@ -5857,7 +5856,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20COMINO%20MOLIDO%20PURO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COMINO MOLIDO PURO X KG.', 20500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE COMINO MOLIDO PURO X KG.', 20500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003133</td>
@@ -5865,7 +5864,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 30.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CREMOR%20TARTARO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CREMOR TARTARO X KG.', 30000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CREMOR TARTARO X KG.', 30000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000147</td>
@@ -5873,7 +5872,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 16.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CURCUMA%20EN%20POLVO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CURCUMA EN POLVO X KG.', 16000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CURCUMA EN POLVO X KG.', 16000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002627</td>
@@ -5881,7 +5880,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 13.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CURRY%20PICANTE%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CURRY PICANTE X KG.', 13500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CURRY PICANTE X KG.', 13500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000146</td>
@@ -5889,7 +5888,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 13.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20CURRY%20SUAVE%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CURRY SUAVE X KG.', 13000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE CURRY SUAVE X KG.', 13000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000371</td>
@@ -5897,7 +5896,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 12.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20DATILES%20C/%20CAROZO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE DATILES C/ CAROZO X KG.', 12500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE DATILES C/ CAROZO X KG.', 12500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000373</td>
@@ -5905,7 +5904,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 33.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20DATILES%20PREMIUM%20MEDJOOL%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE DATILES PREMIUM MEDJOOL X KG', 33500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE DATILES PREMIUM MEDJOOL X KG', 33500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001067</td>
@@ -5913,7 +5912,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 24.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20DIENTE%20DE%20LEON%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE DIENTE DE LEON X KG.', 24000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE DIENTE DE LEON X KG.', 24000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001125</td>
@@ -5921,7 +5920,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 27.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ERITRITOL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ERITRITOL X KG.', 27000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ERITRITOL X KG.', 27000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003142</td>
@@ -5929,7 +5928,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 25.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20EUCALIPTUS%20MENTOLADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE EUCALIPTUS MENTOLADO X KG.', 25000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE EUCALIPTUS MENTOLADO X KG.', 25000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002308</td>
@@ -5937,7 +5936,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 22.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20EUCALIPTUS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE EUCALIPTUS X KG.', 22000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE EUCALIPTUS X KG.', 22000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000188</td>
@@ -5945,7 +5944,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.100</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20FECULA%20DE%20MAIZ%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FECULA DE MAIZ X KG.', 3100)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FECULA DE MAIZ X KG.', 3100)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000104</td>
@@ -5953,7 +5952,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20FECULA%20DE%20MANDIOCA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FECULA DE MANDIOCA X KG.', 3500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FECULA DE MANDIOCA X KG.', 3500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000400</td>
@@ -5961,7 +5960,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 10.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20FENOGRECO%20EN%20GRANO%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FENOGRECO EN GRANO X KG', 10500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FENOGRECO EN GRANO X KG', 10500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003829</td>
@@ -5969,7 +5968,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 18.200</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20FINAS%20HIERBAS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FINAS HIERBAS X KG.', 18200)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FINAS HIERBAS X KG.', 18200)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001068</td>
@@ -5977,7 +5976,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 34.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20FLOR%20DE%20JAMAICA%20HIBISCUS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FLOR DE JAMAICA HIBISCUS X KG.', 34000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FLOR DE JAMAICA HIBISCUS X KG.', 34000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001069</td>
@@ -5985,7 +5984,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 41.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20FLORES%20DE%20MANZANILLA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FLORES DE MANZANILLA X KG.', 41000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE FLORES DE MANZANILLA X KG.', 41000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002082</td>
@@ -5993,7 +5992,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 30.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20GARAM%20MASALA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GARAM MASALA X KG.', 30000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GARAM MASALA X KG.', 30000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003819</td>
@@ -6001,7 +6000,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20GARBANZO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GARBANZO X KG.', 2500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GARBANZO X KG.', 2500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003301</td>
@@ -6009,7 +6008,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 95.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20GELATINA%20AGAR%20AGAR%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GELATINA AGAR AGAR X KG.', 95000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GELATINA AGAR AGAR X KG.', 95000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001279</td>
@@ -6017,7 +6016,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 35.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20GELATINA%20S/%20SABOR%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GELATINA S/ SABOR X KG.', 35000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GELATINA S/ SABOR X KG.', 35000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000421</td>
@@ -6025,7 +6024,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 4.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20GIRASOL%20C/%20CASCARA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GIRASOL C/ CASCARA X KG.', 4000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GIRASOL C/ CASCARA X KG.', 4000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003998</td>
@@ -6033,7 +6032,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 6.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20GIRASOL%20PELADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GIRASOL PELADO X KG.', 6000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE GIRASOL PELADO X KG.', 6000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000476</td>
@@ -6041,7 +6040,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20ALGARROBA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ALGARROBA X KG.', 8500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ALGARROBA X KG.', 8500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000227</td>
@@ -6049,7 +6048,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 25.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20ALMENDRA%20C/%20PIEL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ALMENDRA C/ PIEL X KG.', 25000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ALMENDRA C/ PIEL X KG.', 25000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003793</td>
@@ -6057,7 +6056,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 17.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20ALMENDRA%20PLUS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ALMENDRA PLUS X KG.', 17000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ALMENDRA PLUS X KG.', 17000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000087</td>
@@ -6065,7 +6064,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 33.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20ALMENDRA%20S/%20PIEL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ALMENDRA S/ PIEL X KG.', 33500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ALMENDRA S/ PIEL X KG.', 33500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003843</td>
@@ -6073,7 +6072,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20ARROZ%20INT.%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ARROZ INT. X KG', 2000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ARROZ INT. X KG', 2000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003842</td>
@@ -6081,7 +6080,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 1.750</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20ARROZ%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ARROZ X KG.', 1750)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE ARROZ X KG.', 1750)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000226</td>
@@ -6089,7 +6088,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.200</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20AVENA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE AVENA X KG.', 3200)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE AVENA X KG.', 3200)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003845</td>
@@ -6097,7 +6096,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20CHIA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE CHIA X KG.', 2500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE CHIA X KG.', 2500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000307</td>
@@ -6105,7 +6104,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 13.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20COCO%20ORGANICA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE COCO ORGANICA X KG.', 13000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE COCO ORGANICA X KG.', 13000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002909</td>
@@ -6113,7 +6112,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 11.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20COCO%20S/%20TACC%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE COCO S/ TACC X KG.', 11000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE COCO S/ TACC X KG.', 11000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000228</td>
@@ -6121,7 +6120,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20COCO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE COCO X KG.', 8500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE COCO X KG.', 8500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003846</td>
@@ -6129,7 +6128,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20GARBANZO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE GARBANZO X KG.', 2500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE GARBANZO X KG.', 2500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001024</td>
@@ -6137,7 +6136,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 1.800</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20LENTEJA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE LENTEJA X KG.', 1800)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE LENTEJA X KG.', 1800)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000015</td>
@@ -6145,7 +6144,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 4.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20LINO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE LINO X KG.', 4000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE LINO X KG.', 4000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000721</td>
@@ -6153,7 +6152,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 4.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20MAIZ%20BLANCO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE MAIZ BLANCO X KG.', 4500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE MAIZ BLANCO X KG.', 4500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003204</td>
@@ -6161,7 +6160,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20MAIZ%20MICRONIZADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE MAIZ MICRONIZADA X KG.', 2500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE MAIZ MICRONIZADA X KG.', 2500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000016</td>
@@ -6169,7 +6168,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 9.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20QUINOA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE QUINOA X KG.', 9000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE QUINOA X KG.', 9000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000279</td>
@@ -6177,7 +6176,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 1.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20TRIGO%20INTEGRAL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE TRIGO INTEGRAL X KG.', 1500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE TRIGO INTEGRAL X KG.', 1500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000208</td>
@@ -6185,7 +6184,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 11.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20DE%20TRIGO%20SARRACENO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE TRIGO SARRACENO X KG.', 11000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA DE TRIGO SARRACENO X KG.', 11000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003844</td>
@@ -6193,7 +6192,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 18.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HARINA%20PROTEICA/KETO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA PROTEICA/KETO X KG.', 18000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HARINA PROTEICA/KETO X KG.', 18000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000431</td>
@@ -6201,7 +6200,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 17.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HOMEMADE%20GRANOLA%20CRUNCH%20X%20KILO" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HOMEMADE GRANOLA CRUNCH X KILO', 17500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HOMEMADE GRANOLA CRUNCH X KILO', 17500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002784</td>
@@ -6209,7 +6208,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 52.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20HONGO%20BOLETUS%20%28PINO%29%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HONGO BOLETUS (PINO) X KG.', 52000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE HONGO BOLETUS (PINO) X KG.', 52000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003544</td>
@@ -6217,7 +6216,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20ACELGA%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ACELGA CONGELADA X KG.', 8000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ACELGA CONGELADA X KG.', 8000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002916</td>
@@ -6225,7 +6224,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 16.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20ANANA%20CONGELADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ANANA CONGELADO X KG.', 16000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ANANA CONGELADO X KG.', 16000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003326</td>
@@ -6233,7 +6232,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 15.200</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20ARANDANO%20CONGELADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ARANDANO CONGELADO X KG.', 15200)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ARANDANO CONGELADO X KG.', 15200)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00004018</td>
@@ -6241,7 +6240,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 7.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20ARVEJA%20ENTERA%20CONGELADA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ARVEJA ENTERA CONGELADA X KG', 7500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ARVEJA ENTERA CONGELADA X KG', 7500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001443</td>
@@ -6249,7 +6248,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 10.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20BROCOLI%20CONGELADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF BROCOLI CONGELADO X KG.', 10000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF BROCOLI CONGELADO X KG.', 10000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000150</td>
@@ -6257,7 +6256,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20CEBOLLA%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF CEBOLLA CONGELADA X KG.', 8000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF CEBOLLA CONGELADA X KG.', 8000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000749</td>
@@ -6265,7 +6264,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 14.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20CHAMPIGNON%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF CHAMPIGNON CONGELADA X KG.', 14500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF CHAMPIGNON CONGELADA X KG.', 14500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002981</td>
@@ -6273,7 +6272,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 11.200</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20CHAUCHA%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF CHAUCHA CONGELADA X KG.', 11200)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF CHAUCHA CONGELADA X KG.', 11200)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001352</td>
@@ -6281,7 +6280,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20CHOCLO%20CONGELADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF CHOCLO CONGELADO X KG.', 8500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF CHOCLO CONGELADO X KG.', 8500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000409</td>
@@ -6289,7 +6288,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 11.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20DURAZNO%20CONGELADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF DURAZNO CONGELADO X KG.', 11000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF DURAZNO CONGELADO X KG.', 11000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002551</td>
@@ -6297,7 +6296,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.800</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20ESPINACA%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ESPINACA CONGELADA X KG.', 8800)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF ESPINACA CONGELADA X KG.', 8800)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001441</td>
@@ -6305,7 +6304,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 31.700</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20FRAMBUESA%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF FRAMBUESA CONGELADA X KG.', 31700)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF FRAMBUESA CONGELADA X KG.', 31700)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000403</td>
@@ -6313,7 +6312,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 10.800</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20FRUTILLA%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF FRUTILLA CONGELADA X KG.', 10800)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF FRUTILLA CONGELADA X KG.', 10800)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003385</td>
@@ -6321,7 +6320,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 16.600</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20MIX%204%20BERRIES%20CONGELADA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF MIX 4 BERRIES CONGELADA X KG', 16600)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF MIX 4 BERRIES CONGELADA X KG', 16600)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003545</td>
@@ -6329,7 +6328,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 16.400</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20MIX%20PATAGONICO%20CONG.%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF MIX PATAGONICO CONG. X KG.', 16400)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF MIX PATAGONICO CONG. X KG.', 16400)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001440</td>
@@ -6337,7 +6336,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 13.300</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20MIX%20PRANA%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF MIX PRANA CONGELADA X KG.', 13300)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF MIX PRANA CONGELADA X KG.', 13300)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001296</td>
@@ -6345,7 +6344,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 13.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20MORA%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF MORA CONGELADA X KG.', 13000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF MORA CONGELADA X KG.', 13000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000410</td>
@@ -6353,7 +6352,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20PALTA%20CUBOS%20CONGELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF PALTA CUBOS CONGELADA X KG.', 20000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF PALTA CUBOS CONGELADA X KG.', 20000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000441</td>
@@ -6361,7 +6360,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 24.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20PULPA%20DE%20ACAI%20CONGELADA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF PULPA DE ACAI CONGELADA X KG', 24000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF PULPA DE ACAI CONGELADA X KG', 24000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000440</td>
@@ -6369,7 +6368,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 16.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20IQF%20PULPA%20MARACUYA%20CONG.%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF PULPA MARACUYA CONG. X KG', 16500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE IQF PULPA MARACUYA CONG. X KG', 16500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003517</td>
@@ -6377,7 +6376,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 30.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20JENGIBRE%20DESHIDROAZUCARADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE JENGIBRE DESHIDROAZUCARADO X KG.', 30000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE JENGIBRE DESHIDROAZUCARADO X KG.', 30000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003482</td>
@@ -6385,7 +6384,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 21.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20JENGIBRE%20MOLIDO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE JENGIBRE MOLIDO X KG.', 21000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE JENGIBRE MOLIDO X KG.', 21000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003836</td>
@@ -6393,7 +6392,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 21.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20KUMMEL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE KUMMEL X KG.', 21000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE KUMMEL X KG.', 21000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002346</td>
@@ -6401,7 +6400,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 24.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20LAUREL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LAUREL X KG.', 24000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LAUREL X KG.', 24000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003232</td>
@@ -6409,7 +6408,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 40.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20LECHE%20DE%20COCO%20POLVO%20S/TACC%20X%20%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LECHE DE COCO POLVO S/TACC X  KG', 40000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LECHE DE COCO POLVO S/TACC X  KG', 40000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000303</td>
@@ -6417,7 +6416,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20LENTEJA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LENTEJA X KG.', 3500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LENTEJA X KG.', 3500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000294</td>
@@ -6425,7 +6424,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 6.400</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20LENTEJAS%20TURCAS%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LENTEJAS TURCAS X KG', 6400)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LENTEJAS TURCAS X KG', 6400)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003808</td>
@@ -6433,7 +6432,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 4.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20LENTEJON%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LENTEJON X KG.', 4000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LENTEJON X KG.', 4000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003823</td>
@@ -6441,7 +6440,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.700</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20LINO%20MARRON%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LINO MARRON X KG.', 3700)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE LINO MARRON X KG.', 3700)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003792</td>
@@ -6449,7 +6448,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 16.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MAIZ%20FRITO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MAIZ FRITO X KG.', 16500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MAIZ FRITO X KG.', 16500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000189</td>
@@ -6457,7 +6456,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.200</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MAIZ%20PISADO%20BLANCO%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MAIZ PISADO BLANCO X KG', 3200)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MAIZ PISADO BLANCO X KG', 3200)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003821</td>
@@ -6465,7 +6464,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 1.600</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MAIZ%20PISINGALLO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MAIZ PISINGALLO X KG.', 1600)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MAIZ PISINGALLO X KG.', 1600)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000359</td>
@@ -6473,7 +6472,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 6.100</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MANI%20EN%20VAINA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MANI EN VAINA X KG.', 6100)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MANI EN VAINA X KG.', 6100)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003170</td>
@@ -6481,7 +6480,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MANI%20TOSTADO%20S/%20SAL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MANI TOSTADO S/ SAL X KG.', 3000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MANI TOSTADO S/ SAL X KG.', 3000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003826</td>
@@ -6489,7 +6488,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 8.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%204%20SEMILLAS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX 4 SEMILLAS X KG.', 8000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX 4 SEMILLAS X KG.', 8000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003825</td>
@@ -6497,7 +6496,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 12.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%208%20SEMILLAS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX 8 SEMILLAS X KG.', 12000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX 8 SEMILLAS X KG.', 12000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003848</td>
@@ -6505,7 +6504,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%20AURA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX AURA X KG.', 20000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX AURA X KG.', 20000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003850</td>
@@ -6513,7 +6512,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 26.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%20GAIA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX GAIA X KG.', 26500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX GAIA X KG.', 26500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003853</td>
@@ -6521,7 +6520,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 14.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%20KAPHA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX KAPHA X KG.', 14500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX KAPHA X KG.', 14500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000278</td>
@@ -6529,7 +6528,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 60.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%20PIMIENTAS%20EN%20GRANO%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX PIMIENTAS EN GRANO X KG', 60000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX PIMIENTAS EN GRANO X KG', 60000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003854</td>
@@ -6537,7 +6536,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 21.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%20PITTA%20PREMIUM%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX PITTA PREMIUM X KG.', 21000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX PITTA PREMIUM X KG.', 21000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003851</td>
@@ -6545,7 +6544,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 17.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%20PITTA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX PITTA X KG.', 17500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX PITTA X KG.', 17500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003849</td>
@@ -6553,7 +6552,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 24.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%20VATA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX VATA X KG.', 24000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX VATA X KG.', 24000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003852</td>
@@ -6561,7 +6560,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 21.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20MIX%20VITALIS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX VITALIS X KG.', 21000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE MIX VITALIS X KG.', 21000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000360</td>
@@ -6569,7 +6568,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 22.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20NUEZ%20MARIPOSA%20EXTRA%20LIGHT%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE NUEZ MARIPOSA EXTRA LIGHT X KG.', 22000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE NUEZ MARIPOSA EXTRA LIGHT X KG.', 22000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001577</td>
@@ -6577,7 +6576,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 70.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20NUEZ%20MOSCADA%20EN%20GRANO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE NUEZ MOSCADA EN GRANO X KG.', 70000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE NUEZ MOSCADA EN GRANO X KG.', 70000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003837</td>
@@ -6585,7 +6584,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 33.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20NUEZ%20MOSCADA%20MOLIDA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE NUEZ MOSCADA MOLIDA X KG.', 33000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE NUEZ MOSCADA MOLIDA X KG.', 33000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000362</td>
@@ -6593,7 +6592,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 37.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20NUEZ%20PECAN%20ENTERA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE NUEZ PECAN ENTERA X KG.', 37500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE NUEZ PECAN ENTERA X KG.', 37500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000138</td>
@@ -6601,7 +6600,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 12.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ORANN%20BARRITA%20CROCANTE%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ORANN BARRITA CROCANTE X KG.', 12500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ORANN BARRITA CROCANTE X KG.', 12500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000145</td>
@@ -6609,7 +6608,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 15.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ORANN%20BARRITA%20ENERGETICA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ORANN BARRITA ENERGETICA X KG', 15500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ORANN BARRITA ENERGETICA X KG', 15500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002860</td>
@@ -6617,7 +6616,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 12.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ORANN%20GRANOLA%20ENERGETICA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ORANN GRANOLA ENERGETICA X KG.', 12500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ORANN GRANOLA ENERGETICA X KG.', 12500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000137</td>
@@ -6625,7 +6624,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 9.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20OREGANO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE OREGANO X KG.', 9000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE OREGANO X KG.', 9000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002345</td>
@@ -6633,7 +6632,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 16.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PAPRIKA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PAPRIKA X KG.', 16500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PAPRIKA X KG.', 16500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002562</td>
@@ -6641,7 +6640,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 9.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PASA%20DE%20UVA%20NEGRA%20JUMBO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PASA DE UVA NEGRA JUMBO X KG.', 9500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PASA DE UVA NEGRA JUMBO X KG.', 9500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002431</td>
@@ -6649,7 +6648,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 6.200</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PASA%20DE%20UVA%20NEGRA%20SULTANINA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PASA DE UVA NEGRA SULTANINA X KG', 6200)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PASA DE UVA NEGRA SULTANINA X KG', 6200)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000367</td>
@@ -6657,7 +6656,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 11.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PASA%20DE%20UVA%20RUBIA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PASA DE UVA RUBIA X KG.', 11000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PASA DE UVA RUBIA X KG.', 11000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001099</td>
@@ -6665,7 +6664,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 37.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PASIONARIA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PASIONARIA X KG.', 37000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PASIONARIA X KG.', 37000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001100</td>
@@ -6673,7 +6672,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 60.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PEPERINA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PEPERINA X KG.', 60000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PEPERINA X KG.', 60000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003828</td>
@@ -6681,7 +6680,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 18.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PEREJIL%20DESHIDRATADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PEREJIL DESHIDRATADO X KG.', 18500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PEREJIL DESHIDRATADO X KG.', 18500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000143</td>
@@ -6689,7 +6688,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 15.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PIMENTON%20AHUMADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMENTON AHUMADO X KG.', 15000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMENTON AHUMADO X KG.', 15000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002344</td>
@@ -6697,7 +6696,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 60.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PIMIENTA%20BLANCA%20EN%20GRANO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA BLANCA EN GRANO X KG.', 60500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA BLANCA EN GRANO X KG.', 60500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000132</td>
@@ -6705,7 +6704,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 62.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PIMIENTA%20BLANCA%20MOLIDA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA BLANCA MOLIDA X KG.', 62000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA BLANCA MOLIDA X KG.', 62000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002398</td>
@@ -6713,7 +6712,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PIMIENTA%20DE%20CAYENA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA DE CAYENA X KG', 20000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA DE CAYENA X KG', 20000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000130</td>
@@ -6721,7 +6720,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 38.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PIMIENTA%20NEGRA%20EN%20GRANO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA NEGRA EN GRANO X KG.', 38000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA NEGRA EN GRANO X KG.', 38000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000131</td>
@@ -6729,7 +6728,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 37.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PIMIENTA%20NEGRA%20MOLIDA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA NEGRA MOLIDA X KG.', 37500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PIMIENTA NEGRA MOLIDA X KG.', 37500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002783</td>
@@ -6737,7 +6736,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 95.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PISTACHO%20PELADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PISTACHO PELADO X KG.', 95000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PISTACHO PELADO X KG.', 95000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000363</td>
@@ -6745,7 +6744,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 39.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PISTACHO%20TOSTADO%20S/%20SAL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PISTACHO TOSTADO S/ SAL X KG.', 39000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PISTACHO TOSTADO S/ SAL X KG.', 39000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000808</td>
@@ -6753,7 +6752,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 9.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20POLVO%20PARA%20HORNEAR%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POLVO PARA HORNEAR X KG.', 9000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POLVO PARA HORNEAR X KG.', 9000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000301</td>
@@ -6761,7 +6760,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 7.200</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20POROTO%20ADUKI%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO ADUKI X KG.', 7200)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO ADUKI X KG.', 7200)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000297</td>
@@ -6769,7 +6768,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20POROTO%20ALUBIA%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO ALUBIA X KG', 3500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO ALUBIA X KG', 3500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000298</td>
@@ -6777,7 +6776,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 4.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20POROTO%20COLORADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO COLORADO X KG.', 4000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO COLORADO X KG.', 4000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000361</td>
@@ -6785,7 +6784,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 5.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20POROTO%20LUPINES%20BLANCOS%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO LUPINES BLANCOS X KG', 5000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO LUPINES BLANCOS X KG', 5000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000300</td>
@@ -6793,7 +6792,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20POROTO%20MUNG%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO MUNG X KG.', 3000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO MUNG X KG.', 3000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000299</td>
@@ -6801,7 +6800,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.700</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20POROTO%20NEGRO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO NEGRO X KG.', 3700)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO NEGRO X KG.', 3700)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003178</td>
@@ -6809,7 +6808,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 10.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20POROTO%20PALLARES%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO PALLARES X KG.', 10000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE POROTO PALLARES X KG.', 10000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000402</td>
@@ -6817,7 +6816,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 40.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PSYLLIUM%20EN%20POLVO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PSYLLIUM EN POLVO X KG.', 40000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PSYLLIUM EN POLVO X KG.', 40000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002437</td>
@@ -6825,7 +6824,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 30.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20PSYLLIUM%20SEMILLA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PSYLLIUM SEMILLA X KG.', 30000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE PSYLLIUM SEMILLA X KG.', 30000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000882</td>
@@ -6833,7 +6832,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 12.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20QUINOA%20BLANCA%20REAL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE QUINOA BLANCA REAL X KG.', 12000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE QUINOA BLANCA REAL X KG.', 12000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000282</td>
@@ -6841,7 +6840,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 19.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20QUINOA%20NEGRA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE QUINOA NEGRA X KG.', 19500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE QUINOA NEGRA X KG.', 19500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000283</td>
@@ -6849,7 +6848,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 15.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20QUINOA%20ROJA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE QUINOA ROJA X KG.', 15500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE QUINOA ROJA X KG.', 15500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000765</td>
@@ -6857,7 +6856,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 35.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20RAS%20EL%20HANOUT%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE RAS EL HANOUT X KG.', 35000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE RAS EL HANOUT X KG.', 35000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000133</td>
@@ -6865,7 +6864,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 30.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20ROMERO%20EN%20HOJAS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ROMERO EN HOJAS X KG.', 30000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE ROMERO EN HOJAS X KG.', 30000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000165</td>
@@ -6873,7 +6872,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 5.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SAL%20DEL%20HIMALAYA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SAL DEL HIMALAYA X KG.', 5000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SAL DEL HIMALAYA X KG.', 5000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001408</td>
@@ -6881,7 +6880,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.750</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SAL%20MARINA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SAL MARINA X KG.', 3750)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SAL MARINA X KG.', 3750)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000288</td>
@@ -6889,7 +6888,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.400</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SALVADO%20DE%20AVENA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SALVADO DE AVENA X KG.', 3400)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SALVADO DE AVENA X KG.', 3400)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000291</td>
@@ -6897,7 +6896,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 2.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SALVADO%20DE%20TRIGO%20X%20KG" target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SALVADO DE TRIGO X KG', 2000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SALVADO DE TRIGO X KG', 2000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003824</td>
@@ -6905,7 +6904,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 10.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SEMILLA%20DE%20CHIA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLA DE CHIA X KG.', 10500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLA DE CHIA X KG.', 10500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000394</td>
@@ -6913,7 +6912,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 6.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SEMILLA%20GIRASOL%20PELADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLA GIRASOL PELADA X KG.', 6000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLA GIRASOL PELADA X KG.', 6000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002173</td>
@@ -6921,7 +6920,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SEMILLAS%20DE%20AMAPOLA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLAS DE AMAPOLA X KG.', 20000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLAS DE AMAPOLA X KG.', 20000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002845</td>
@@ -6929,7 +6928,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 12.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SEMILLAS%20DE%20HINOJO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLAS DE HINOJO X KG.', 12500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLAS DE HINOJO X KG.', 12500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001442</td>
@@ -6937,7 +6936,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 16.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SEMILLAS%20DE%20ZAPALLO%20%22A%22%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLAS DE ZAPALLO &quot;A&quot; X KG.', 16500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLAS DE ZAPALLO &quot;A&quot; X KG.', 16500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000401</td>
@@ -6945,7 +6944,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 25.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SEMILLAS%20DE%20ZAPALLO%20%22AA%22%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLAS DE ZAPALLO &quot;AA&quot; X KG.', 25000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SEMILLAS DE ZAPALLO &quot;AA&quot; X KG.', 25000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000397</td>
@@ -6953,7 +6952,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 10.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SESAMO%20BLANCO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SESAMO BLANCO X KG.', 10000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SESAMO BLANCO X KG.', 10000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003822</td>
@@ -6961,7 +6960,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 4.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SESAMO%20INTEGRAL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SESAMO INTEGRAL X KG.', 4500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SESAMO INTEGRAL X KG.', 4500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000396</td>
@@ -6969,7 +6968,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 17.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SESAMO%20NEGRO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SESAMO NEGRO X KG.', 17000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SESAMO NEGRO X KG.', 17000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000273</td>
@@ -6977,7 +6976,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SOJA%20TEXTURIZADA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SOJA TEXTURIZADA X KG.', 3500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SOJA TEXTURIZADA X KG.', 3500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002334</td>
@@ -6985,7 +6984,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 56.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20SPIRULINA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SPIRULINA X KG.', 56000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE SPIRULINA X KG.', 56000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002340</td>
@@ -6993,7 +6992,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 52.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20STEVIA%20EN%20HOJA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE STEVIA EN HOJA X KG.', 52000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE STEVIA EN HOJA X KG.', 52000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001102</td>
@@ -7001,7 +7000,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 23.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20STEVIA%20EN%20POLVO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE STEVIA EN POLVO X KG.', 23000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE STEVIA EN POLVO X KG.', 23000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000964</td>
@@ -7009,7 +7008,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 95.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20TE%20CHAI%20HEBRAS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TE CHAI HEBRAS X KG.', 95000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TE CHAI HEBRAS X KG.', 95000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002640</td>
@@ -7017,7 +7016,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 165.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20TE%20VERDE%20MATCHA%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TE VERDE MATCHA X KG.', 165000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TE VERDE MATCHA X KG.', 165000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00000349</td>
@@ -7025,7 +7024,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 17.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20TOMATES%20SECOS%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TOMATES SECOS X KG.', 17000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TOMATES SECOS X KG.', 17000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00002158</td>
@@ -7033,7 +7032,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 20.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20TOMILLO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TOMILLO X KG.', 20500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TOMILLO X KG.', 20500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003840</td>
@@ -7041,7 +7040,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 3.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20TRIGO%20BURGOL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TRIGO BURGOL X KG.', 3000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TRIGO BURGOL X KG.', 3000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003841</td>
@@ -7049,7 +7048,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 11.500</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20TRIGO%20SARRACENO%20PELADO%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TRIGO SARRACENO PELADO X KG.', 11500)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE TRIGO SARRACENO PELADO X KG.', 11500)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00003168</td>
@@ -7057,7 +7056,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 35.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20XILITOL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE XILITOL X KG.', 35000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE XILITOL X KG.', 35000)">Agregar</button></div></td>
     </tr>
     <tr>
       <td class="cod">00001126</td>
@@ -7065,7 +7064,7 @@
       <td class="attrs-col"></td>
       <td class="price">$ 30.000</td>
       <td class="ver-col"><a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=PESABLE%20XYLITOL%20X%20KG." target="_blank" rel="noopener">Ver</a></td>
-      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="1" placeholder="gramos" title="Cantidad en gramos"><button class="pesable-btn" onclick="addPesable(this, 'PESABLE XYLITOL X KG.', 30000)">Agregar</button></div></td>
+      <td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0" title="Cantidad en gramos"><span class="pesable-unit">Gr.</span><button class="pesable-btn" onclick="addPesable(this, 'PESABLE XYLITOL X KG.', 30000)">Agregar</button></div></td>
     </tr>
     <tr data-vegano="1" data-vegetariano="1" data-keto="1">
       <td class="cod">00003607</td>
