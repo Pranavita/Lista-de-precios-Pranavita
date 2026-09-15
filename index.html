@@ -1378,32 +1378,38 @@ async function loadProducts() {
       fetch('clasificacion.json')
     ]);
     if (!csvRes.ok) throw new Error('No se pudo leer productos.csv (' + csvRes.status + ')');
-    const csvText = await csvRes.text();
+    // El export del sistema viene en ISO-8859-1 (Latin-1), no UTF-8 —
+    // si lo leyéramos como texto UTF-8 las tildes y la Ñ saldrían mal.
+    const csvBuffer = await csvRes.arrayBuffer();
+    const csvText = new TextDecoder('iso-8859-1').decode(csvBuffer);
     let clasificacion = {};
     if (clasifRes.ok) {
       try { clasificacion = await clasifRes.json(); } catch(e) { clasificacion = {}; }
     }
 
     const rows = parseCSV(csvText);
-    const header = rows[0].map(h => h.trim().toLowerCase());
-    const idx = {
-      cod: header.indexOf('cod'),
-      desc: header.indexOf('desc'),
-      tag: header.indexOf('tag'),
-      price: header.indexOf('price'),
-      barcode: header.indexOf('barcode'),
-    };
+    // El export crudo del sistema no tiene fila de encabezado: cada fila
+    // repite unas etiquetas fijas ("Listado General", "Cod.Interno", etc.)
+    // y los datos reales están siempre en las mismas columnas:
+    //   [6]=cod  [7]=cod.barras  [8]=descripcion  [9]=etiqueta  [10]=precio
+    const COL_COD = 6, COL_BARCODE = 7, COL_DESC = 8, COL_TAG = 9, COL_PRICE = 10;
 
     const products = [];
-    for (let i = 1; i < rows.length; i++) {
+    const seen = new Set();
+    for (let i = 0; i < rows.length; i++) {
       const r = rows[i];
-      if (!r || idx.cod < 0 || !r[idx.cod]) continue;
-      const cod = r[idx.cod].trim();
-      const desc = (r[idx.desc] || '').trim();
-      const tag = (r[idx.tag] || '').trim();
-      const price = parseInt((r[idx.price] || '0').replace(/[^\d-]/g, ''), 10) || 0;
-      const barcode = (r[idx.barcode] || '').trim();
+      if (!r || r.length <= COL_PRICE) continue;
+      const cod = (r[COL_COD] || '').trim();
+      if (!cod || !/^\d+$/.test(cod)) continue;
+      const desc = (r[COL_DESC] || '').trim();
       if (!desc) continue;
+      if (desc.toUpperCase().includes('NO USAR')) continue; // producto discontinuado/marcado para no mostrar
+      if (seen.has(cod)) continue; // por si el export repite alguna fila
+      seen.add(cod);
+
+      const tag = (r[COL_TAG] || '').trim();
+      const price = Math.round(parseFloat(r[COL_PRICE]) || 0);
+      const barcode = (r[COL_BARCODE] || '').trim();
 
       const brand = desc.split(/\s+/)[0] || '';
       const pesable = brand === 'PESABLE';
