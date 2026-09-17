@@ -1336,7 +1336,7 @@ function classifyProduct(desc, tag) {
   if (d.includes('vegano') || d.includes('vegan') || d.includes('plant b')) { result.add('vegano'); result.add('vegetariano'); }
   if (d.includes('keto') || d.includes('s/harinas')) result.add('keto');
   if (d.includes('sin tacc') || d.includes('s/ tacc') || d.includes('sin gluten')) result.add('sin_tacc');
-  if (d.includes('sin azucar') || d.includes('sin azúcar') || d.includes('s/azucar') || d.includes('s/ azucar')) result.add('sin_azucar');
+  if (d.includes('sin azucar') || d.includes('sin azúcar') || d.includes('s/azucar') || d.includes('s/ azucar') || d.includes('c/stevia') || d.includes('c/ stevia')) result.add('sin_azucar');
   if (d.includes('sin sal') || d.includes('s/sal') || d.includes('s/ sal')) result.add('sin_sal');
   if (d.includes('sin lactosa') || d.includes('deslac') || d.includes('s/ lactosa')) result.add('sin_lactosa');
   if (d.includes('sin conserv') || d.includes('s/conserv')) result.add('sin_conservantes');
