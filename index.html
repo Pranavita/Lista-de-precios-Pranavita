@@ -952,6 +952,21 @@ function showToast(msg, type) {
 const WA_NUMBER = '541170599629';
 let cart = []; // [{desc, price, qty}]
 
+// ── Persistencia del carrito (para no perderlo si se pierde señal o se
+// recarga la página sin querer, una vez que ya se abrió con conexión) ──
+function saveCartToStorage() {
+  try { localStorage.setItem('pranavita_cart', JSON.stringify(cart)); } catch (e) { /* ignorar si no hay storage disponible */ }
+}
+function loadCartFromStorage() {
+  try {
+    const raw = localStorage.getItem('pranavita_cart');
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) cart = parsed;
+    }
+  } catch (e) { /* ignorar si el dato guardado está corrupto */ }
+}
+
 function addToCart(btn, desc, price) {
   const existing = cart.find(i => i.desc === desc);
   if (existing) {
@@ -1038,6 +1053,7 @@ function updateRowBadge(btn, desc) {
 }
 
 function updateCartUI() {
+  saveCartToStorage();
   const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
   const count = cart.reduce((s, i) => s + i.qty, 0);
   const totalStr = '$ ' + total.toLocaleString('es-AR');
@@ -1760,8 +1776,39 @@ function filterTable(){
 let _st=null;
 window.addEventListener('scroll',()=>{if(_st)return;_st=setTimeout(()=>{_st=null;maybeLoadMore();},100);},{passive:true});
 document.addEventListener('DOMContentLoaded',()=>{
+  loadCartFromStorage();
   loadProducts();
+  updateCartUI();
 });
+
+// ── Service worker: guarda una copia de la página y de los productos
+// para poder seguir navegando/comprando aunque se pierda la señal,
+// siempre que se haya abierto al menos una vez con conexión. ──
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => { /* si falla, la página sigue funcionando online igual */ });
+  });
+}
+
+// Aviso simple cuando no hay conexión, para que se entienda por qué
+// los precios pueden no ser los más recientes.
+function showOfflineBanner(show) {
+  let banner = document.getElementById('offline-banner');
+  if (show) {
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'offline-banner';
+      banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:9999;background:#b45309;color:#fff;text-align:center;padding:6px 10px;font-size:0.82rem;font-weight:600;';
+      banner.textContent = 'Sin conexión — mostrando la última lista guardada';
+      document.body.prepend(banner);
+    }
+  } else if (banner) {
+    banner.remove();
+  }
+}
+window.addEventListener('offline', () => showOfflineBanner(true));
+window.addEventListener('online', () => showOfflineBanner(false));
+if (!navigator.onLine) showOfflineBanner(true);
 // ─────────────────────────────────────────────────────────
 </script>
 </body>
