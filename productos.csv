@@ -51,12 +51,6 @@
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000404","7798378750018","BAMBOO POCHOCOCLOS SWEET X 80GR","",3000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003665","7798424300037","BARRA BRAVA BOCADO BRAVITO X 22GR.","",800.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003657","7798424300051","BARRA BRAVA CHOCO & NUECES & COCO X 45GR","",1400.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003655","7798424300082","BARRA BRAVA DATIL&CHOCO PROTEICA X 58GR.","15GR PROT.",1700.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003659","7798424300075","BARRA BRAVA DATILES&ARANDANOS X 45GR","",1400.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003658","7798424300068","BARRA BRAVA FRUTILLA & NARANJA X 45GR.","",1400.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00001977","7798424300013","BARRA BRAVA FUNGI 1GR MELENA LEON X 40GR","S/CONSERV.",2000.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003889","7798327950117","BEAUDROIT YOGUR DESCREM F. ROJOS X 160GR","",3300.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003890","7798327950087","BEAUDROIT YOGUR DESCREM VAINILLA X 160GR","",3000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00002564","7798327950186","BEAUDROIT YOGUR DESLAC. F. ROJOS X 160GR","DESCREMADO",3300.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003888","7798327950179","BEAUDROIT YOGUR DESLAC. FRUTILLA X 160GR","DESCREMADO",3300.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00001662","7798327950131","BEAUDROIT YOGUR ENTERO NATURAL X 160GR.","S/ AZUCAR",3000.00,0.00,"","","",1
@@ -110,6 +104,12 @@
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00001243","7798346740157","BURGANAS ZANAHORIA Y ROMERO X 460GR.","S/TACC",6000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004005","7798142880095","CARILO TOST. DE ARROZ BALANCE X 150GR.","S/ AZUCAR",2300.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00002898","7798142880088","CARILO TOST. DE ARROZ DULCES X 150GR.","",2300.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003655","7798424300082","BARRA BRAVA DATIL&CHOCO PROTEICA X 58GR.","15GR PROT.",1700.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003659","7798424300075","BARRA BRAVA DATILES&ARANDANOS X 45GR","",1400.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003658","7798424300068","BARRA BRAVA FRUTILLA & NARANJA X 45GR.","",1400.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00001977","7798424300013","BARRA BRAVA FUNGI 1GR MELENA LEON X 40GR","S/CONSERV.",2000.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003889","7798327950117","BEAUDROIT YOGUR DESCREM F. ROJOS X 160GR","",3300.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003890","7798327950087","BEAUDROIT YOGUR DESCREM VAINILLA X 160GR","",3000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004021","7798142880200","CARILO TOST. DE ARROZ INTEGRAL X 150GR.","",2300.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004004","7798142880026","CARILO TOST. DE ARROZ SIN SAL X 150GR.","S/ SAL",2300.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004178","736684278991","CASA VEGANA BUDIN CARROT CAKE X 500GR","INTEGRAL",7000.00,0.00,"","","",1
@@ -149,12 +149,6 @@
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003602","7798160700610","DELICEL GALLES DE COCO X 200GR.","",3000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003773","7798160700634","DELICEL GALLES DE MIEL X 200GR.","",3000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003772","7798160700580","DELICEL GALLES DE NARANJA X 200GR.","",3000.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003603","7798160700603","DELICEL GALLES DE VAINILLA&CHIPS X 200GR","",3000.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000564","7798160700320","Delicel Galletitas con chips","",1780.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00002247","7798160700641","DELICEL PEPAS DE BATATA X 200GR.","",3000.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00002002","7798160700597","DELICEL PEPAS DE MEMBRILLO. X 200GR.","",3000.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000240","7798160700023","Delicel Premezcla bizcochuelo chocolate","",3350.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00001182","7798160700696","Delicel Premezcla bizcochuelo naranja","",4150.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004039","BUDINKETO","CASERO BUDIN DE H. ALMENDRA X 300GR","SIN AZUCAR",10000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004067","BUDINKESO","CASERO BUDIN DE QUESO X 400GR","H.ALMENDRA",9000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004038","BUDINX400","CASERO BUDIN INTEGRAL SIN AZUCAR X 400GR","",8500.00,0.00,"","","",1
@@ -291,13 +285,13 @@
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003945","7798136870613","DAHI YOGUR ENTERO FRUTILLA X 190 GR","C/ PULPA",3000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004128","7798136872013","DAHI YOGUR PROTEICO DESLACTOSADO X 190GR","VAINILLA",3500.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004129","7798136872020","DAHI YOGUR PROTEICO DESLACTOSADO X 190GR","F. ROJOS",3500.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000241","7798160700016","Delicel Premezcla bizcochuelo vainilla","",3050.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000244","7798160700221","Delicel Premezcla ñoquis","",4800.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003603","7798160700603","DELICEL GALLES DE VAINILLA&CHIPS X 200GR","",3000.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00002247","7798160700641","DELICEL PEPAS DE BATATA X 200GR.","",3000.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00002002","7798160700597","DELICEL PEPAS DE MEMBRILLO. X 200GR.","",3000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00001178","7798160700566","DELICEL PREMEZCLA PAN INTEGRAL X 500GR.","SIN SAL",4000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000243","7798160700054","DELICEL PREMEZCLA PAN X 500GR.","SIN SAL",4000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000242","7798160700030","DELICEL PREMEZCLA PIZZA X 500GR.","SIN SAL",4000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000239","7798160700047","DELICEL PREMEZCLA UNIVERSAL X 500GR.","",4000.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000232","7798160700245","Delicel Rebozador sin tacc","",3340.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004191","7798301130054","DELUXE ALF. DE ARROZ LIMON X 28 GR.","99 KCAL",1000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004192","7798301130184","DELUXE ALF. DE ARROZ MANI X 28 GR.","99 KCAL",1000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000012","7798301130061","DELUXE ALFAJOR ARROZ BLANCO X 28 GR","99 KCAL",1000.00,0.00,"","","",1
@@ -444,9 +438,9 @@
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00000344","7798456650025","GRANGER PANCAKES KETO CHOCOLATE X 200GR.","LISTO 5m",12000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003463","7798456650179","GRANGER PANCAKES KETO VAINILLA X 200GR.","LISTO 5m.",12000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004074","7798456650131","GRANGER PANCAKES PROTE. CHOCO X 400GR","LISTO 3min",15000.00,0.00,"","","",1
+"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004193","7798456650209","GRANGER PANCAKES PROTE. SALADOS X 300GR.","QUESO",16500.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00002020","7798456650124","GRANGER PANCAKES PROTE. VAINILLA X 400GR","LISTO 3min",15000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003476","7798456650377","GRANGER PANCAKES PROTEICOS CHOCO VEGANO","LISTO 5m",15000.00,0.00,"","","",1
-"Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00004193","7798456650209","GRANGER PANCAKES PROTEICOS SALADOS X300G","QUESO",16500.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003931","7798456650339","GRANGER PROTEINA DE ARVEJA X 453GR.","PLANT B.",20000.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003760","7798398811157","GRANO PAMPA GARBANZOS X 600 GR.","",3600.00,0.00,"","","",1
 "Listado General",17/09/26,"Cod.Interno","Codigo de Barra","Descripcion","Precio","00003766","7798398811096","GRANO PAMPA HARINA DE ARVEJAS X 500GR.","",3000.00,0.00,"","","",1
