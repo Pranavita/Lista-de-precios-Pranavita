@@ -1388,17 +1388,35 @@ async function loadProducts() {
     }
 
     const rows = parseCSV(csvText);
-    // El export crudo del sistema no tiene fila de encabezado: cada fila
-    // repite unas etiquetas fijas ("Listado General", "Cod.Interno", etc.)
-    // y los datos reales están siempre en las mismas columnas:
-    //   [6]=cod  [7]=cod.barras  [8]=descripcion  [9]=etiqueta  [10]=precio
-    const COL_COD = 6, COL_BARCODE = 7, COL_DESC = 8, COL_TAG = 9, COL_PRICE = 10;
+
+    // productos.csv puede venir en dos formatos distintos y esto detecta
+    // automáticamente cuál es, para que no importe cuál quede subido:
+    //  A) "simple": una fila de encabezado literal "cod,desc,tag,price,barcode"
+    //  B) "crudo": el export tal cual lo baja el sistema, SIN encabezado,
+    //     con columnas fijas repetidas ("Listado General", "Cod.Interno", etc.)
+    //     y los datos reales siempre en las mismas posiciones:
+    //     [6]=cod  [7]=cod.barras  [8]=descripcion  [9]=etiqueta  [10]=precio
+    const firstRow = (rows[0] || []).map(c => (c || '').trim().toLowerCase());
+    const isSimpleFormat = firstRow[0] === 'cod' && firstRow.includes('desc') && firstRow.includes('price');
+
+    let COL_COD, COL_BARCODE, COL_DESC, COL_TAG, COL_PRICE, dataRows;
+    if (isSimpleFormat) {
+      COL_COD = firstRow.indexOf('cod');
+      COL_DESC = firstRow.indexOf('desc');
+      COL_TAG = firstRow.indexOf('tag');
+      COL_PRICE = firstRow.indexOf('price');
+      COL_BARCODE = firstRow.indexOf('barcode');
+      dataRows = rows.slice(1);
+    } else {
+      COL_COD = 6; COL_BARCODE = 7; COL_DESC = 8; COL_TAG = 9; COL_PRICE = 10;
+      dataRows = rows;
+    }
 
     const products = [];
     const seen = new Set();
-    for (let i = 0; i < rows.length; i++) {
-      const r = rows[i];
-      if (!r || r.length <= COL_PRICE) continue;
+    for (let i = 0; i < dataRows.length; i++) {
+      const r = dataRows[i];
+      if (!r || r.length <= COL_PRICE || r.length <= COL_COD || r.length <= COL_DESC) continue;
       const cod = (r[COL_COD] || '').trim();
       if (!cod || !/^\d+$/.test(cod)) continue;
       const desc = (r[COL_DESC] || '').trim();
@@ -1408,7 +1426,7 @@ async function loadProducts() {
       seen.add(cod);
 
       const tag = (r[COL_TAG] || '').trim();
-      const price = Math.round(parseFloat(r[COL_PRICE]) || 0);
+      const price = Math.round(parseFloat((r[COL_PRICE] || '0').replace(',', '.')) || 0);
       const barcode = (r[COL_BARCODE] || '').trim();
 
       const brand = desc.split(/\s+/)[0] || '';
@@ -1428,6 +1446,9 @@ async function loadProducts() {
       });
     }
 
+    if (products.length === 0) {
+      showToast('productos.csv se pudo leer pero no se reconoció ningún producto — revisá que el archivo no esté vacío o dañado.', 'error');
+    }
     ALL_PRODUCTS = products;
   } catch (err) {
     console.error('Error cargando productos:', err);
