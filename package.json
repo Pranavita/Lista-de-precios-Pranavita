@@ -1,0 +1,8 @@
+{
+  "name": "sync-desde-stockvence",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "firebase-admin": "^12.3.1"
+  }
+}
