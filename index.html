@@ -175,13 +175,6 @@
   .rem-btn:hover { background: #dc2626; color: white; transform: scale(1.1); }
   .rem-btn.visible { visibility: visible; }
   td.cart-col { text-align: center; width: 100px; }
-  .sin-stock-badge {
-    display: inline-block; padding: 4px 10px; border-radius: 999px;
-    background: #f1eae0; color: #6b6259; font-size: 0.75rem; font-weight: 700;
-    white-space: nowrap;
-  }
-  tr.fila-sin-stock { opacity: 0.55; }
-  tr.fila-sin-stock .desc { text-decoration: none; }
   thead th.cart-th { text-align: center; width: 100px; }
   .cart-col-inner {
     display: inline-flex; align-items: center; gap: 8px;
@@ -1188,12 +1181,6 @@ const imgCache = {};
 const REPO_IMG_BASE = 'https://pranavita.github.io/Lista-de-precios-Pranavita/img/';
 
 async function showProductImage(cod, desc, barcode) {
-  // Las fotos que se sacan desde la app StockVence quedan guardadas con el
-  // codigo de barra como nombre de archivo (ver scripts/sync-desde-stockvence.mjs),
-  // asi que buscamos por ahi primero. Si un producto no tiene codigo de
-  // barra cargado, usamos el Cod.Interno como respaldo.
-  const clave = (barcode && barcode.trim()) ? barcode.trim() : cod;
-
   // Show modal
   document.getElementById('img-modal-title').textContent = desc;
   document.getElementById('img-modal-spinner').style.display = 'flex';
@@ -1203,25 +1190,25 @@ async function showProductImage(cod, desc, barcode) {
   document.getElementById('img-modal-overlay').style.display = 'flex';
 
   // Return cached
-  if (imgCache[clave]) { renderImage(imgCache[clave]); return; }
+  if (imgCache[cod]) { renderImage(imgCache[cod]); return; }
 
   const googleUrl = 'https://www.google.com/search?tbm=isch&q=' + encodeURIComponent(desc);
 
   // 1. Try Pranavita repo image (jpg, then png, then webp)
   const extensions = ['jpg', 'jpeg', 'png', 'webp'];
   for (const ext of extensions) {
-    const url = REPO_IMG_BASE + clave + '.' + ext;
+    const url = REPO_IMG_BASE + cod + '.' + ext;
     const found = await imageExists(url);
     if (found) {
-      imgCache[clave] = { url, source: 'Foto Pranavita', googleUrl };
-      renderImage(imgCache[clave]);
+      imgCache[cod] = { url, source: 'Foto Pranavita', googleUrl };
+      renderImage(imgCache[cod]);
       return;
     }
   }
 
   // 2. Fallback: Google Images link
-  imgCache[clave] = { url: null, googleUrl };
-  renderImage(imgCache[clave]);
+  imgCache[cod] = { url: null, googleUrl };
+  renderImage(imgCache[cod]);
 }
 
 function imageExists(url) {
@@ -1402,10 +1389,9 @@ async function loadProducts() {
   const resultCountEl = document.getElementById('result-count');
   if (resultCountEl) resultCountEl.textContent = 'Cargando productos...';
   try {
-    const [csvRes, clasifRes, stockRes] = await Promise.all([
+    const [csvRes, clasifRes] = await Promise.all([
       fetch('productos.csv'),
-      fetch('clasificacion.json'),
-      fetch('stock.json').catch(() => null) // si todavia no corrio la sincronizacion, seguimos sin stock.json
+      fetch('clasificacion.json')
     ]);
     if (!csvRes.ok) throw new Error('No se pudo leer productos.csv (' + csvRes.status + ')');
     // El export del sistema viene en ISO-8859-1 (Latin-1), no UTF-8 —
@@ -1415,16 +1401,6 @@ async function loadProducts() {
     let clasificacion = {};
     if (clasifRes.ok) {
       try { clasificacion = await clasifRes.json(); } catch(e) { clasificacion = {}; }
-    }
-
-    // stock.json: { "<codigoDeBarra>": { disponible: true/false, stock: N } }
-    // Lo genera solo, cada 1 hora, el robot de GitHub Actions leyendo StockVence
-    // (ver scripts/sync-desde-stockvence.mjs). Si un producto no aparece ahi
-    // (todavia no se cargo en la app, o no tiene codigo de barra), se sigue
-    // mostrando como disponible por las dudas — nunca ocultamos por defecto.
-    let stockPorBarcode = {};
-    if (stockRes && stockRes.ok) {
-      try { stockPorBarcode = await stockRes.json(); } catch(e) { stockPorBarcode = {}; }
     }
 
     const rows = parseCSV(csvText);
@@ -1480,14 +1456,9 @@ async function loadProducts() {
       const casero_noveget = known ? !!known.casero_noveget : false;
       const casero_budinqueso = known ? !!known.casero_budinqueso : false;
 
-      const infoStock = barcode ? stockPorBarcode[barcode] : undefined;
-      const disponible = infoStock ? !!infoStock.disponible : true;
-      const stockCantidad = infoStock ? infoStock.stock : null;
-
       products.push({
         cod, desc, tag, price, barcode, attrs, brand, mix,
-        pesable, casero, casero_noazucar, casero_noveget, casero_budinqueso,
-        disponible, stockCantidad
+        pesable, casero, casero_noazucar, casero_noveget, casero_budinqueso
       });
     }
 
@@ -1708,15 +1679,11 @@ function makeRow(p){
   const ver=(p.pesable||p.casero)
     ?`<a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=${gq}" target="_blank" rel="noopener">Ver</a>`
     :`<button class="ver-btn" onclick="showProductImage('${p.cod}','${de}','${p.barcode}')">Ver</button>`;
-  const sinStock = p.disponible === false;
-  const cart = sinStock
-    ? `<td class="cart-col"><span class="sin-stock-badge" title="Sin stock por ahora">Sin stock</span></td>`
-    : (p.pesable
-      ?`<td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0"><select class="pesable-unit-select"><option value="gr">Gr.</option><option value="kg">Kg.</option></select><button class="pesable-btn" onclick="addPesable(this,'${de}',${p.price})">Agregar</button></div></td>`
-      :`<td class="cart-col"><div class="cart-col-inner"><button class="rem-btn" onclick="removeFromCart(this,'${de}',${p.price})" title="Quitar">-</button><span class="qty-badge">0</span><button class="add-btn" onclick="addToCart(this,'${de}',${p.price})" title="Agregar">+</button></div></td>`);
+  const cart=p.pesable
+    ?`<td class="cart-col"><div class="pesable-wrap"><input class="pesable-input" type="number" min="100" placeholder="0"><select class="pesable-unit-select"><option value="gr">Gr.</option><option value="kg">Kg.</option></select><button class="pesable-btn" onclick="addPesable(this,'${de}',${p.price})">Agregar</button></div></td>`
+    :`<td class="cart-col"><div class="cart-col-inner"><button class="rem-btn" onclick="removeFromCart(this,'${de}',${p.price})" title="Quitar">-</button><span class="qty-badge">0</span><button class="add-btn" onclick="addToCart(this,'${de}',${p.price})" title="Agregar">+</button></div></td>`;
   const dataAttrs=(p.attrs||[]).map(k=>`data-${k}="1"`).join(' ');
-  const filaClase = sinStock ? ' class="fila-sin-stock"' : '';
-  return `<tr ${dataAttrs} data-cod="${p.cod}"${filaClase}><td class="cod">${p.cod}</td><td class="desc mix-desc">${p.desc}${ex} ${th}</td><td class="attrs-col">${badges}</td><td class="price">${ps}</td><td class="ver-col">${ver}</td>${cart}</tr>`;
+  return `<tr ${dataAttrs} data-cod="${p.cod}"><td class="cod">${p.cod}</td><td class="desc mix-desc">${p.desc}${ex} ${th}</td><td class="attrs-col">${badges}</td><td class="price">${ps}</td><td class="ver-col">${ver}</td>${cart}</tr>`;
 }
 
 function renderChunk(from,to){
