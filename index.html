@@ -1223,6 +1223,15 @@ async function showProductImage(cod, desc, barcode) {
   // barra cargado, usamos el Cod.Interno como respaldo.
   const clave = (barcode && barcode.trim()) ? barcode.trim() : cod;
 
+  // El PLU de un pesable puede venir con ceros a la izquierda en esta
+  // lista de precios (ej. "00165", tal cual lo exporta la balanza) pero
+  // haberse guardado sin ellos en la app StockVence al sacar la foto (ej.
+  // "plu_165.jpg") — o al revés. Probamos la clave tal cual viene Y la
+  // version sin esos ceros, para no depender de que los dos lados usen
+  // siempre el mismo formato (ver pluNormalizado() en la app).
+  const sinCeros = clave.replace(/(^|plu_)0+(?=\d)/, '$1');
+  const claves = sinCeros !== clave ? [clave, sinCeros] : [clave];
+
   // Show modal
   document.getElementById('img-modal-title').textContent = desc;
   document.getElementById('img-modal-spinner').style.display = 'flex';
@@ -1236,15 +1245,18 @@ async function showProductImage(cod, desc, barcode) {
 
   const googleUrl = 'https://www.google.com/search?tbm=isch&q=' + encodeURIComponent(desc);
 
-  // 1. Try Pranavita repo image (jpg, then png, then webp)
+  // 1. Try Pranavita repo image (jpg, then png, then webp), con cada
+  // variante de clave posible.
   const extensions = ['jpg', 'jpeg', 'png', 'webp'];
-  for (const ext of extensions) {
-    const url = REPO_IMG_BASE + clave + '.' + ext;
-    const found = await imageExists(url);
-    if (found) {
-      imgCache[clave] = { url, source: 'Foto Pranavita', googleUrl };
-      renderImage(imgCache[clave]);
-      return;
+  for (const claveProbada of claves) {
+    for (const ext of extensions) {
+      const url = REPO_IMG_BASE + claveProbada + '.' + ext;
+      const found = await imageExists(url);
+      if (found) {
+        imgCache[clave] = { url, source: 'Foto Pranavita', googleUrl };
+        renderImage(imgCache[clave]);
+        return;
+      }
     }
   }
 
