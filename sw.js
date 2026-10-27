@@ -5,8 +5,8 @@
 // Si en el futuro cambiás la estructura del sitio (por ejemplo, agregás
 // nuevos archivos que también deban guardarse), subí el número de
 // CACHE_NAME (v1 -> v2) para que los navegadores refresquen la copia guardada.
-const CACHE_NAME = 'pranavita-cache-v1';
-const CORE_ASSETS = ['./', 'index.html', 'productos.csv', 'clasificacion.json'];
+const CACHE_NAME = 'pranavita-cache-v2';
+const CORE_ASSETS = ['./', 'index.html', 'productos.csv', 'clasificacion.json', 'marcas.json'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -31,7 +31,7 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
 
   const url = new URL(req.url);
-  const isData = url.pathname.endsWith('productos.csv') || url.pathname.endsWith('clasificacion.json');
+  const isData = url.pathname.endsWith('productos.csv') || url.pathname.endsWith('clasificacion.json') || url.pathname.endsWith('marcas.json');
   const isPage = url.pathname.endsWith('index.html') || url.pathname.endsWith('/');
 
   if (isData || isPage) {
