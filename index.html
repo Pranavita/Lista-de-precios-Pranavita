@@ -1194,21 +1194,45 @@ async function showProductImage(cod, desc, barcode) {
 
   const googleUrl = 'https://www.google.com/search?tbm=isch&q=' + encodeURIComponent(desc);
 
-  // 1. Try Pranavita repo image (jpg, then png, then webp)
-  const extensions = ['jpg', 'jpeg', 'png', 'webp'];
-  for (const ext of extensions) {
-    const url = REPO_IMG_BASE + cod + '.' + ext;
-    const found = await imageExists(url);
-    if (found) {
-      imgCache[cod] = { url, source: 'Foto Pranavita', googleUrl };
-      renderImage(imgCache[cod]);
-      return;
-    }
+  // 1. Buscar la foto en el repo (img/). La app StockVence sube las fotos con
+  //    el CÓDIGO DE BARRAS como nombre ({barras}.jpg), y para los pesables con
+  //    el código de balanza ({plu_N}.jpg); las subidas a mano usan el código
+  //    interno. Se prueban todos los nombres posibles A LA VEZ y se elige el
+  //    primero que exista, en orden de prioridad.
+  const urls = imageCandidates(cod, barcode).map(n => REPO_IMG_BASE + encodeURIComponent(n.name) + '.' + n.ext);
+  const exists = await Promise.all(urls.map(imageExists));
+  const hit = exists.indexOf(true);
+  if (hit >= 0) {
+    imgCache[cod] = { url: urls[hit], source: 'Foto Pranavita', googleUrl };
+    renderImage(imgCache[cod]);
+    return;
   }
 
   // 2. Fallback: Google Images link
   imgCache[cod] = { url: null, googleUrl };
   renderImage(imgCache[cod]);
+}
+
+// Nombres posibles de la foto de un producto, por orden de prioridad.
+function imageCandidates(cod, barcode) {
+  const names = [];
+  const add = n => { if (n && !names.includes(n)) names.push(n); };
+  const bc = (barcode || '').trim();
+  if (bc && bc !== 'undefined') {
+    add(bc);                                              // 7790890111995.jpg
+    if (/^\d{7,12}$/.test(bc)) add(bc.padStart(13, '0')); // EAN-13 con cero adelante
+    if (/^\d{1,6}$/.test(bc)) {                           // código corto de balanza (pesables)
+      add('plu_' + bc);                                   // plu_00959.jpg
+      add('plu_' + String(parseInt(bc, 10)));             // plu_959.jpg
+    }
+  }
+  add('plu_' + String(parseInt(cod, 10)));                // plu_3234.jpg (por código interno)
+  add(cod);                                               // 00003720.jpg (subidas a mano)
+  // La app siempre sube .jpg; para el resto de los nombres se admiten otras extensiones
+  // solo con el código interno (fotos subidas a mano).
+  const out = names.map(name => ({ name, ext: 'jpg' }));
+  ['jpeg', 'png', 'webp'].forEach(ext => out.push({ name: cod, ext }));
+  return out;
 }
 
 function imageExists(url) {
@@ -1727,7 +1751,7 @@ function makeRow(p){
   let ex='';
   if(p.mix) ex+=`<span class="mix-ingredients">${p.mix}</span>`;
   if(p.casero){const br=p.casero_budinqueso?'<br>':' ';ex+=`${br}<span class="mix-ingredients pranavita-note">🌿 Elaborado por Pranavita</span>`;}
-  const ver=(p.pesable||p.casero)
+  const ver=(p.casero)
     ?`<a class="ver-btn" href="https://www.google.com/search?tbm=isch&q=${gq}" target="_blank" rel="noopener">Ver</a>`
     :`<button class="ver-btn" onclick="showProductImage('${p.cod}','${de}','${p.barcode}')">Ver</button>`;
   const cart=p.pesable
